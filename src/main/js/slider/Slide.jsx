@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Markdown from 'react-remarkable';
 
 export default class Slide extends Component {
     render() {
@@ -8,7 +9,9 @@ export default class Slide extends Component {
                 {id}
             </div>
             <div className="slide">
-                { slide.description}
+                <Markdown>
+                    { slide.description }
+                </Markdown>
             </div>
         </li>);
     }
