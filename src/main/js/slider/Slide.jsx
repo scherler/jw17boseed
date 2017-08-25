@@ -4,7 +4,7 @@ import Markdown from 'react-remarkable';
 export default class Slide extends Component {
     render() {
         const { slide, id } = this.props;
-        return (<div key={id} className="BasicHeader BasicHeader--default ContentPageHeader">
+        return (<div key={id} className="slide BasicHeader BasicHeader--default ContentPageHeader">
             <div className="Header-topNav">
                 <h2 className="jenkins-header-logo">
                     { slide.title }
