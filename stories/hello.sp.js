@@ -10,7 +10,9 @@ const stories = storiesOf('Hello World', module);
 let storyName = 'say hello to unit testing in storybook';
 stories.add(storyName, () => {
     const story = (<div className="hello">
-        <Logo />
+        <Logo>
+            <div>Crazy</div>
+        </Logo>
         <div className="teaser">
             Hello
         </div>
