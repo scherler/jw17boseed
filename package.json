@@ -25,7 +25,7 @@
     ],
     "automock": false,
     "testMatch": [
-      "**/src/main/js/stories/*.sp.js?(x)",
+      "**/stories/*.sp.js?(x)",
       "**/src/test/js/**/*-spec.{js,jsx}"
     ],
     "globals": {
