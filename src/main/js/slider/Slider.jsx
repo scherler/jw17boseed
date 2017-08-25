@@ -7,10 +7,10 @@ export default class Slider extends Component {
         if (!slidesProps) {
             return null;
         }
-        const slides = slidesProps.map((item, index) => (<Slide slide={item} id={index} />));
+        const slides = slidesProps.map((item, index) => (<li key={index}><Slide slide={item} id={index} /></li>));
         console.log('alone');
         // return the component
-        return (<ul>
+        return (<ul className="slider">
             { slides }
         </ul>);
     }
