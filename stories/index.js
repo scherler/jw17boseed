@@ -7,3 +7,4 @@ ext.store.init({
 });
 
 require('./hello.sp');
+require('./slider.sp');
