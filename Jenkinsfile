@@ -12,8 +12,6 @@ node {
   // Mark the code build 'stage'....
   stage('Testing BlueOcean Sample Plugin') {
     sh "mvn test -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.artifact.threads=30"
-    junit '**/target/surefire-reports/TEST-*.xml'
-    junit '**/target/jest-reports/*.xml'
   }
   stage ('Building docker image') {
     // Build Docker file, run it and smoke test it
