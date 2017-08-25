@@ -8,3 +8,4 @@ ext.store.init({
 
 require('./hello.sp');
 require('./slider.sp');
+require('./presentation');

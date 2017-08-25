@@ -6,6 +6,7 @@ import Slider from '../src/main/js/slider/Slider';
 import { beforeEach, storiesOf, describe, it, specs } from '../.storybook/facade';
 
 const slide = {
+    id: '0',
     title: "Pimp my Blue Ocean",
     description: "### create a custom plugin \n" +
     "\n" +
@@ -34,6 +35,7 @@ stories.add(storyName, () => {
 const slides = [
     slide,
     {
+        id: '1',
         title: "Deliver Blue Ocean Components at the Speed of Light",
         description: "Using storybook.js.org for Blue Ocean frontend to \n" +
         "\n" +
@@ -51,7 +53,7 @@ stories.add(storyName, () => {
 
     specs(() => describe(storyName, () => {
         it('renders main div', () => {
-            expect(wrapper.find('ul.slider').length).toBe(1)
+            expect(wrapper.find('div.slider').length).toBe(1)
         });
     }));
     return story;

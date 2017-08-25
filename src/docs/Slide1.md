@@ -23,6 +23,8 @@ Placed relative to `jenkins-js-extension.yaml`. The `.jsx` file contains a [Reac
 
 ## jenkins-js-extension.yaml
 
+The implementation of an extension point is declare/define in `jenkins-js-extension.yaml` in order "picked up" by Blue Ocean. 
+
 ```yaml
 #
 # Extension point implementations in this plugin.
