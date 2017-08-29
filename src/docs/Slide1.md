@@ -1,12 +1,12 @@
 ## Pimp my Blue Ocean
 
-### create a custom plugin 
+- create a custom plugin 
 
-We will use [JenkinsWorld 2017 BO seed](https://github.com/scherler/jw17boseed)
+  We will use [JenkinsWorld 2017 BO seed](https://github.com/scherler/jw17boseed)
 
-### customize Blue Ocean
- - with custom css
- - custom components
+- customize Blue Ocean
+   - with custom css
+   - custom components
 
 ## Plugin Anatomy
 ​
@@ -17,13 +17,11 @@ We will use [JenkinsWorld 2017 BO seed](https://github.com/scherler/jw17boseed)
 ![Extension](./images/extensionpoint.png)
 
 1. `jenkins-js-extension.yaml` - Extension Point definition file. 
-Needs to be placed in `src/main/js` (the root of your JavaScript source).   
+Needs to be placed in `src/main/js` (the root of your JavaScript source) in order "picked up" by Blue Ocean. 
 1. The `.jsx` component file that implements the Extension Point.
 Placed relative to `jenkins-js-extension.yaml`. The `.jsx` file contains a [React] component needs `export default class Logo extends Component`. 
 
 ## jenkins-js-extension.yaml
-
-The implementation of an extension point is declare/define in `jenkins-js-extension.yaml` in order "picked up" by Blue Ocean. 
 
 ```yaml
 #
@@ -76,3 +74,11 @@ Logo.propTypes = {
   height: 50px;
 }
 ```
+
+## Better theme support
+
+There is a ticket open [JENKINS-44466](https://issues.jenkins-ci.org/browse/JENKINS-44466) to enhance the support for themes since overriding the css is not optimal.
+
+##¿Questions?
+
+![misterion](./images/misterion.png)

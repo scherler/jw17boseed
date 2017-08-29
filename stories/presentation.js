@@ -8,15 +8,13 @@ import { beforeEach, storiesOf, describe, it, specs } from '../.storybook/facade
 const slide = {
     id: '0',
     title: "Pimp my Blue Ocean",
-    description: " - with custom css\n" +
-    " - custom components",
-    content: "### create a custom plugin \n" +
-    "\n" +
-    "We will use [JenkinsWorld 2017 BO seed](https://github.com/scherler/jw17boseed)\n" +
-    "\n" +
-    "### customize Blue Ocean\n" +
-    " - with custom css\n" +
-    " - custom components",
+    description: "by Thorsten Scherler",
+    content: "- create a custom plugin \n" +
+        "\n" +
+        "  We will use [https://github.com/scherler/jw17boseed](https://github.com/scherler/jw17boseed)\n" +
+        " - customize Blue Ocean\n" +
+        "   - with custom css\n" +
+        "   - custom components",
 };
 const stories = storiesOf('Pimp my BO', module);
 
@@ -30,18 +28,18 @@ const slides = [
     },
     {
         id: '2',
-        title: "Extension Point",
+        title: "Extension Points",
         description: "How to Implement a Client-Side (JavaScript) Extension Point",
         content: "![Extension](./images/extensionpoint.png)\n" +
         "1. `jenkins-js-extension.yaml` - Extension Point definition file. \n" +
-        "Needs to be placed in `src/main/js` (the root of your JavaScript source).   \n" +
+        "Needs to be placed in `src/main/js` (the root of your JavaScript source) in order \"picked up\" by Blue Ocean.  \n \n" +
         "1. The `.jsx` component file that implements the Extension Point.\n" +
         "Placed relative to `jenkins-js-extension.yaml`. The `.jsx` file contains a [React] component needs `export default class Logo extends Component`. \n",
     },
     {
         id: '3',
         title: "jenkins-js-extension.yaml",
-        description: "The implementation of an extension point is declare/define in `jenkins-js-extension.yaml` in order \"picked up\" by Blue Ocean. \n",
+        description: "Explained in detail",
         content: "```yaml\n" +
         "# Extension point implementations in this plugin.\n" +
         "# This file tells Blue Ocean what Extension Point components are in this\n" +
@@ -52,6 +50,7 @@ const slides = [
         "    extensionPoint: jenkins.header.logo\n" +
         "```\n" +
         "\n" +
+        "Final result looks something like\n\n" +
         "![final](./images/extensionFinal.png)\n",
     },
     {
@@ -79,9 +78,10 @@ const slides = [
     {
         id: '5',
         title: "Add Style using LESS",
-        description: "1. mkdir src/main/less\n" +
-        "1. touch extensions.less",
-        content: "```less\n" +
+        description: "Override css from BO",
+        content: "1. mkdir src/main/less\n" +
+        "1. touch extensions.less\n" +
+        "```less\n" +
         ".MyLogo{\n" +
         "  border-bottom: 2px outset red;\n" +
         "  background-color: #c7ddef;\n" +
@@ -91,8 +91,20 @@ const slides = [
         "}\n" +
         "```",
     },
+    {
+        id: '6',
+        title: "Better theme support",
+        description: "CSS is sub-optimal",
+        content: "There is a ticket open [JENKINS-44466](https://issues.jenkins-ci.org/browse/JENKINS-44466) to enhance the support for themes since overriding the css is not optimal.",
+    },
+    {
+        id: '7',
+        title: "¿Questions? ",
+        description: "...and answers",
+        content: "![misterion](./images/misterion.png)",
+    },
 ];
-const storyName = 'Slider';
+const storyName = 'Slides';
 stories.add(storyName, () => {
     const story = (<div className="story">
         <Slider slides={slides}/>
