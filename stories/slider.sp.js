@@ -8,7 +8,8 @@ import { beforeEach, storiesOf, describe, it, specs } from '../.storybook/facade
 const slide = {
     id: '0',
     title: "Pimp my Blue Ocean",
-    description: "### create a custom plugin \n" +
+    description: "by Thorsten Scherler",
+    content: "### create a custom plugin \n" +
     "\n" +
     "We will use [JenkinsWorld 2017 BO seed](https://github.com/scherler/jw17boseed)\n" +
     "\n" +
@@ -37,7 +38,8 @@ const slides = [
     {
         id: '1',
         title: "Deliver Blue Ocean Components at the Speed of Light",
-        description: "Using storybook.js.org for Blue Ocean frontend to \n" +
+        description: "by Thorsten Scherler",
+        content: "Using storybook.js.org for Blue Ocean frontend to \n" +
         "\n" +
         "- speed up the development \n" +
         "- speed up the delivery process \n" +

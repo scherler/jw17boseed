@@ -8,12 +8,12 @@ export default class Slide extends Component {
            <section className="BasicHeader BasicHeader--default ContentPageHeader">
                <div className="Header-topNav">
                    <h2 className="jenkins-header-logo">
-                       { slide.title }
+                       { slide.description }
                    </h2>
                </div>
                <div className="slide-main">
                    <Markdown>
-                       { slide.description }
+                       { slide.title }
                    </Markdown>
                </div>
            </section>
@@ -27,7 +27,7 @@ export default class Slide extends Component {
     }
 }
 Slide.propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.string,
     slide: PropTypes.shape({
         title: PropTypes.node,
         content: PropTypes.node,
