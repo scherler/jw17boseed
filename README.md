@@ -4,6 +4,10 @@ This is a seed project to quickly create a jenkins-ci new ux plugin.
 It comes with storybook and the [storybook-specification](https://github.com/mthuret/storybook-addon-specifications) plugins already setup.
 To make make it even easier to use it has Docker support to see the storybook server.
 
+# Presentation
+
+The presentation can be found in the branch "speed" to have master a clean seed and to delete less ;)
+
 # Install
 
 After cloning the repository you need to fist build the project.
