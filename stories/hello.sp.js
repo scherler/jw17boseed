@@ -11,7 +11,7 @@ let storyName = 'say hello to unit testing in storybook';
 stories.add(storyName, () => {
     const story = (<div className="hello">
         <Logo>
-            <div>Crazy</div>
+            <div>Jenkins</div>
         </Logo>
         <div className="teaser">
             Hello

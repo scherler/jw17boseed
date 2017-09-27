@@ -13,8 +13,8 @@ const slide = {
         "\n" +
         "  We will use [https://github.com/scherler/jw17boseed](https://github.com/scherler/jw17boseed)\n" +
         " - customize Blue Ocean\n" +
-        "   - with custom css\n" +
-        "   - custom components",
+        "   - custom components\n" +
+        "   - with custom css",
 };
 const stories = storiesOf('Pimp my BO', module);
 
