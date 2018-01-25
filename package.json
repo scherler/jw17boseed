@@ -16,7 +16,7 @@
     "lint": "jjsbuilder --tasks lint",
     "lint:fix": "jjsbuilder --tasks lint --fixLint",
     "bundle:watch": "jjsbuilder --tasks bundle:watch",
-    "mvnbuild": "jjsbuilder --tasks bundle",
+    "mvnbuild": "jjsbuilder --tasks bundle && npm run build-storybook",
     "mvntest": "jjsbuilder --tasks test,lint"
   },
   "jest": {
