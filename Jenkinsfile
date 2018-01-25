@@ -14,7 +14,8 @@ node {
   }
   stage ('smoke') {
     echo 'Test whether you can start it'
-    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/website-build/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
-
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: 'target/website-build/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
   }
 }
+//script-src 'self' https://* moz-extension: blob: filesystem: 'unsafe-eval' 'unsafe-inline'; object-src 'self' https://* moz-extension: blob: filesystem:;
+//
