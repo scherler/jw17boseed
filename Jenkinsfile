@@ -8,6 +8,8 @@ node {
   stage('Building BlueOcean Sample Plugin') {
     sh "mvn clean install -B -DcleanNode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.test.failure.ignore -Dmaven.artifact.threads=30"
     archive '*/target/*.hpi'
+    archiveArtifacts '*/website-build/'
+
   }
   // Mark the code build 'stage'....
   stage('Testing BlueOcean Sample Plugin') {
