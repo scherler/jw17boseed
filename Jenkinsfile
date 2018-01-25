@@ -14,7 +14,7 @@ node {
   }
   stage ('smoke') {
     echo 'Test whether you can start it'
-    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'website-build/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/website-build/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 
   }
 }
