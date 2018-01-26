@@ -7,7 +7,7 @@ node {
   // Mark the code build 'stage'....
   stage('Building BlueOcean Sample Plugin') {
     sh "mvn clean install -B -DskipTests -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.test.failure.ignore -Dmaven.artifact.threads=30"
-    sh 'sh node/npm build-storybook'
+    sh './node/npm build-storybook'
 
     // archiveArtifacts '*/website-build/'
 
