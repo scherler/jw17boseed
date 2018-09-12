@@ -1,0 +1,26 @@
+{
+  viewer {
+    pullRequests(last: 100, states: OPEN, orderBy: {field: CREATED_AT, direction: DESC}) {
+      edges {
+        node {
+          title
+          number
+          repository {
+            name
+            url
+            owner {
+              login
+              avatarUrl
+            }
+          }
+          author {
+            avatarUrl
+            login
+            resourcePath
+            url
+          }
+        }
+      }
+    }
+  }
+}
