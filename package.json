@@ -1,9 +1,9 @@
 {
   "name": "SpeedAndCustom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Thorsten Scherler",
-  "description": "Used in the JenkinsWorld 2017 talks as bas seed.",
+  "description": "Used in the JenkinsWorld 2018 talks as base seed.",
   "scripts": {
     "build": "jjsbuilder",
     "bundle": "jjsbuilder --tasks bundle",
