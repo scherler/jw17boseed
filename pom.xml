@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>2.17</version>
+        <version>2.37</version>
         <relativePath/>
     </parent>
     <groupId>org.jenkins-ci.plugins.blueocean.samples</groupId>
@@ -17,8 +17,8 @@
 
     <properties>
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
-        <jenkins.version>2.7.3</jenkins.version>
-        <blueocean.version>1.1.7</blueocean.version>
+        <jenkins.version>2.138.1</jenkins.version>
+        <blueocean.version>1.8.2</blueocean.version>
 
         <!-- Node and NPM versions. -->
         <node.version>6.4.0</node.version>
