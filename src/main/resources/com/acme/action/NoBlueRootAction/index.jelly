@@ -1,0 +1,52 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core"  xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:x="jelly:xml">
+    <st:contentType value="text/html;charset=UTF-8"/>
+    <j:new var="h" className="hudson.Functions" /><!-- instead of JSP functions -->
+    ${h.initPageVariables(context)}
+    <x:doctype name="html"/>
+    <html>
+        <head data-resurl="${resURL}" data-resturl="${rootURL}/blue/rest" data-appurl="${rootURL}/blue" data-rooturl="${rootURL}">
+            <script src="${resURL}/plugin/SpeedAndCustom/js/polyfill.js"></script>
+            <meta charset="UTF-8"/>
+            <title>CloudBees Jenkins Enterprise</title>
+            <!-- favicon -->
+            <link type="image/x-icon" rel="shortcut icon"
+                  href="${resURL}/plugin/SpeedAndCustom/icons/favicon.ico"></link>
+            <!-- Jenkins theme -->
+            <link href="${resURL}/plugin/SpeedAndCustom/css/jenkins-design-language.css" rel="stylesheet" />
+            <!-- link the generated css -->
+            <link href="${resURL}/plugin/SpeedAndCustom/css/index.css" rel="stylesheet" title="Default Style" />
+        </head>
+        <body>
+            <div id="root" class="container-fluid" data-resurl="${resURL}" data-appurl="${rootURL}/blue" data-rooturl="${rootURL}">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     preserveAspectRatio="none"
+                     viewBox="0 0 100 10"
+                     class="progress-container"
+                >
+                    <line x1="0" y1="5" x2="100" y2="5" class="progress-bg"/>
+                    <line x1="0" y1="5" y2="5" class="progress-bar" id="progressPercentage"/>
+                </svg>
+                <div class="loading">Loading...</div>
+            </div>
+            <script src="${resURL}/plugin/SpeedAndCustom/js/appHelper.js"></script>
+            <script>
+                /*
+                 * Inject BO state
+                 */
+                function setPercentage(newValue) {
+                    const bar = document.getElementById('progressPercentage');
+                    bar.setAttribute('x2', newValue);
+                }
+                setPercentage(10);
+                window.javaScriptLoader("${resURL}/plugin/SpeedAndCustom/js/vendor.js", function() {
+                    setPercentage(40);
+                    window.javaScriptLoader("${resURL}/plugin/SpeedAndCustom/js/bo.js", function() {
+                        setPercentage(90);
+                        window.javaScriptLoader("${resURL}/plugin/SpeedAndCustom/js/index.js");
+                    });
+                });
+            </script>
+        </body>
+    </html>
+</j:jelly>
