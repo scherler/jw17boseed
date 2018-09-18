@@ -19,10 +19,12 @@ export const App = (props) => {
             </HeaderDetails>
         </BasicHeader>
         <main className="Site-content">
-            {React.cloneElement(children, {...props})}
+            <article>
+                {React.cloneElement(children, {...props})}
+            </article>
         </main>
         <footer className="Site-footer">
-            <div>some footer</div>
+            <div>acme footer</div>
         </footer>
     </div>);
 };

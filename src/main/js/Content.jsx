@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const Content = () => (<div>XXX</div>);
+export const Content = () => (<div>Jenkins rocks</div>);
