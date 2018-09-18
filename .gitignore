@@ -9,3 +9,6 @@ dist/
 node/
 node_modules/
 work/
+/src/main/webapp/css/
+/src/main/webapp/fonts/
+/src/main/webapp/js/

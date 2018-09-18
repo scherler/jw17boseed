@@ -1,4 +1,4 @@
-package com.acme;
+package com.acme.rest;
 
 import hudson.ExtensionPoint;
 import io.jenkins.blueocean.Routable;

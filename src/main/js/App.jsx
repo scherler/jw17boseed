@@ -6,7 +6,6 @@ import {
 } from '@jenkins-cd/design-language';
 import Logo from './Logo';
 
-
 export const App = (props) => {
     const { children } = props;
     return (<div className="Site">
@@ -15,8 +14,6 @@ export const App = (props) => {
                 <Logo/>
                 <div className="u-flex-grow" />
             </TopNav>
-        </BasicHeader>
-        <BasicHeader>
             <HeaderDetails>
                 <h1 className="commonLogo logo">Jenkins World</h1>
             </HeaderDetails>

@@ -1,5 +1,6 @@
 package com.acme;
 
+import com.acme.rest.BlueOceanService;
 import hudson.Extension;
 import hudson.model.User;
 import hudson.security.SecurityRealm;
@@ -22,7 +23,7 @@ public class Config extends Resource implements BlueOceanService {
 
     @Override
     public Link getLink() {
-        return ApiHead.INSTANCE().getLink().rel("start/config");
+        return ApiHead.INSTANCE().getLink().rel("acme/config");
     }
 
     @Override
