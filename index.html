@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Jenkins World</title>
+        <!-- Jenkins theme -->
+        <link href="/src/main/webapp/css/jenkins-design-language.css" rel="stylesheet">
+            <!-- link the generated css -->
+        <link href="/src/main/webapp/css/index.css" rel="stylesheet" title="Default Style"/>
+    </head>
+    <body>
+        <div id="root" class="container-fluid">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 preserveAspectRatio="none"
+                 viewBox="0 0 100 10"
+                 class="progress-container"
+            >
+                <line x1="0" y1="5" x2="100" y2="5" class="progress-bg"/>
+                <line x1="0" y1="5" y2="5" class="progress-bar" id="progressPercentage"/>
+            </svg>
+            <div class="loading">Loading...</div>
+        </div>
+        <script src="/src/main/webapp/js/appHelper.js"></script>
+        <script>
+            function setPercentage(newValue) {
+                const bar = document.getElementById('progressPercentage');
+                bar.setAttribute('x2', newValue);
+            }
+            setPercentage(10);
+            window.javaScriptLoader("/src/main/webapp/js/vendor.js", function() {
+                setPercentage(40);
+                window.javaScriptLoader("/src/main/webapp/js/bo.js", function() {
+                    setPercentage(90);
+                    window.javaScriptLoader("/src/main/webapp/js/index.js");
+                });
+            });
+            </script>
+    </body>
+</html>
