@@ -6,7 +6,7 @@ export default class Logo extends Component {
         // return the component
         return (<a className="MasterLogo BlueOceanLogo MyLogo">
             <Icon icon="ActionBookmark" size={50} />
-            My Jenkins</a>);
+            Vélocité</a>);
     }
 }
 Logo.propTypes = {

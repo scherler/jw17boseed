@@ -1,0 +1,3 @@
+/* eslint-disable */
+// Do not edit, it is generated and will be on each build.
+export default {"subject":"[noBo] fix ui design","sha":"9f0a3e26df5ebc6c7f2e509a8c22e750e8ae4f13","shaShort":"9f0a3e2","branches":["master","noBo"],"branch":"noBo","repository":"git@github.com:scherler/jw17boseed.git","authors":["Thorsten Scherler <noreply@github.com>","Thorsten Scherler <scherler@gmail.com>"],"author":"Thorsten Scherler <scherler@gmail.com>","authorDateRelative":"2 months ago","authorDate":"Tue Sep 18 19:09:49 2018 +0200","name":"scherler/jw17boseed","timestamp":"2018-11-27T17:54:02.475Z"}
