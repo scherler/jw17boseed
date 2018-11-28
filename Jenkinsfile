@@ -6,18 +6,18 @@ node {
   }
   // Mark the code build 'stage'....
   stage('Building BlueOcean Sample Plugin') {
-    sh "mvn clean install -B -DcleanNode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.test.failure.ignore -Dmaven.artifact.threads=30"
-    archive '*/target/*.hpi'
+    sh "mvn clean install -P website-executio -B -DcleanNode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.test.failure.ignore -Dmaven.artifact.threads=30"
+    archiveArtifacts '*/target/*.hpi'
     archiveArtifacts '*/target/website-build/'
 
   }
   // Mark the code build 'stage'....
   stage('Testing BlueOcean Sample Plugin') {
-    sh "mvn test -P website-execution -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.artifact.threads=30"
+    echo 'sh "mvn testn -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -Dmaven.artifact.threads=30"'
   }
   stage ('Building docker image') {
     // Build Docker file, run it and smoke test it
-    docker.build('cloudbees/speed-custom-storybook')
+    echo 'docker.build('cloudbees/speed-custom-storybook')'
   }
   stage ('smoke') {
     echo 'Test whether you can start it'
