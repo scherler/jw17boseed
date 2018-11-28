@@ -17,7 +17,7 @@ node {
   }
   stage ('Building docker image') {
     // Build Docker file, run it and smoke test it
-    echo 'docker.build('cloudbees/speed-custom-storybook')'
+    echo 'docker.build(\'cloudbees/speed-custom-storybook\')'
   }
   stage ('smoke') {
     echo 'Test whether you can start it'
